@@ -1,0 +1,36 @@
+{
+    "minutesToSleep": "5",
+    "smtpAddress": "SomeEmailServer.com",
+    "smtpPort": "25",
+    "smtpSender": "Log_Errors@SomeDomain.com",
+    "logLocations": [
+        {
+            "fileLocation": "C:\\somelocation\\someFile_{{{yyyyMMdd}}}.out.log",
+            "searchTerms": [
+                "error",
+                "warning",
+                "exclusion"
+            ],
+            "ignoreTerms": [
+                "regex [/]"
+            ],
+            "smtpRecipients": [
+                "emailToBeAlerted@someDomain.com"
+            ]
+        },
+        {
+            "fileLocation": "C:\\somelocation\\someFile.out.log",
+            "searchTerms": [
+                "error",
+                "warning",
+                "exclusion"
+            ],
+            "ignoreTerms": [
+                "someTerms"
+            ],
+            "smtpRecipients": [
+                "emailToBeAlerted@someDomain.com"
+            ]
+        }
+    ]
+}
